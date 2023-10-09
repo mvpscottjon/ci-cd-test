@@ -1,0 +1,17 @@
+name: CICD Demo
+on:
+ push:
+  branches:
+   - ["master"]
+ pull_request:
+  branches:
+   - ["master"]
+jobs:
+ build-and-test:
+  runs-on: macos-latest
+ steps:
+  - uses: actions/checkout@v3
+  - name: Select Xcode
+    run: sudo Xcode-select -switch /Applications/Xcode-15.0.0.app
+  - name: Build & Test
+    run: xcodebuild clean build test -workspace ProjectName.xcworkspace -scheme SchemeName -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0'
