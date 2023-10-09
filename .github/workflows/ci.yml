@@ -25,4 +25,4 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       - name: Build & Test
-        run: xcodebuild clean build test -workspace ProjectName.xcworkspace -scheme SchemeName -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0'
+        run: xcodebuild clean build test -workspace ci-ct-test.xcworkspace -scheme SchemeName -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0'
