@@ -34,3 +34,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      - name: Select Xcode
+        run: sudo Xcode-select -switch /Applications/Xcode-15.0.0.app
+      - name: Build & Test
+        run: xcodebuild clean build test -workspace ProjectName.xcworkspace -scheme SchemeName -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0'
