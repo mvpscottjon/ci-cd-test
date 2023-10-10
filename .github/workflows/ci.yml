@@ -27,6 +27,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      - name: Select Xcode
-        run: sudo Xcode-select -switch /Applications/Xcode-15.0.0.app
+      - name: Build
+        run: xcodebuild -workspace ci-cd-test.xcworksapce -scheme ci-ct-test build
       
