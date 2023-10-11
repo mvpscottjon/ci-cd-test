@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "B2328F85-A8CC-4727-A989-65B505BC03C1",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:ci-cd-test.xcodeproj",
+        "identifier" : "14273F3D2AD5C40C002C29DB",
+        "name" : "ci-cd-testTests"
+      }
+    }
+  ],
+  "version" : 1
+}
