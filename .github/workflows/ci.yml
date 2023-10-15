@@ -27,6 +27,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      - name: Run Xcodegen
+        run: xccodegen generate
       - name: Build
         run: xcodebuild -target ci-cd-test -scheme ci-cd-test -configuration Release
       - name: Run Tests
