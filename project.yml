@@ -45,4 +45,5 @@ targets:
             - path: ci-cd-testTests
         dependencies:
             - target: ci-cd-test
-
+        settings:
+            INFOPLIST_FILE: ci-cd-test/Info.plist
