@@ -28,15 +28,14 @@ targets:
                 PRODUCT_BUNDLE_IDENTIFIER: com.seven.pets
                 # Team ID
                 DEVELOPMENT_TEAM: "NMM9F9QK67"
+                GENERATE_INFOPLIST_FILE: NO
                 # capability
                 # CODE_SIGN_ENTITLEMENTS: # ci-cd-test/ci-cd-test.entitlements
-
-        # info.plist
-            info: 
-                path: ci-cd-test/Info.plist
+                INFOPLIST_FILE: ci-cd-test/Info.plist
         scheme:
             testTargets:
                 - ci-cd-testTests
+    # Test target
     ci-cd-testTests:
         type: bundle.unit-test
         platform: iOS
@@ -46,6 +45,4 @@ targets:
             - path: ci-cd-testTests
         dependencies:
             - target: ci-cd-test
-        # info.plist
-        info: 
-            path: ci-cd-test/Info.plist
+
