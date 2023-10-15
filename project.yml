@@ -33,9 +33,10 @@ targets:
 
         # info.plist
             info: 
-                path: Sources/ci-cd-test/Info.plist
+                path: ci-cd-test/Info.plist
         scheme:
-            gatherCoverageData: true
+            testTargets:
+                - ci-cd-testTests
     ci-cd-testTests:
         type: bundle.unit-test
         platform: iOS
@@ -45,3 +46,6 @@ targets:
             - path: ci-cd-testTests
         dependencies:
             - target: ci-cd-test
+        # info.plist
+        info: 
+            path: ci-cd-test/Info.plist
