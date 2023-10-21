@@ -27,9 +27,5 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      - name: Run Xcodegen
-        run: xcodegen generate
       - name: Build
-        run: xcodebuild -target ci-cd-test -scheme ci-cd-test -configuration Release
-      - name: Run Tests
-        run: xcodebuild clean test -project ci-cd-test.xcodeproj -scheme ci-cd-test -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0'
+        run: xcodebuild -workspace ci-cd-test.xcworkspace -scheme ci-cd-test -configuration Release build
