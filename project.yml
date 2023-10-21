@@ -7,7 +7,7 @@ options:
     tabWidth: 4
     bundleIDPrefix: "com.seven" 
     xcodeVersion: "15.0"
-    # postGenCommand: pod install
+    postGenCommand: pod install
 
 targets:
     ci-cd-test:
@@ -45,5 +45,6 @@ targets:
             - path: ci-cd-testTests
         dependencies:
             - target: ci-cd-test
+        # [Warning] Could check why need add plist to test target
         settings:
             INFOPLIST_FILE: ci-cd-test/Info.plist
